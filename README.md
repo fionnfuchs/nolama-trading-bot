@@ -12,5 +12,9 @@ Just run the notebook. Insert your Alpaca API Key and Secret in the cell at the 
 ## Performance 
 Currently tested on three timeframes of $AAPL (each roughly 3 days) with minute ticks. The bot trades profitable for these three timeframes even if the overall price trend is negative. The bot underperforms the stock for the timeframe where the price trend is very positive. 
 
+Example plot of bot trading AAPL (bot bought stock at green circles and sold at red circles): 
+
+![Example Plot](/img/example_plot.png)
+
 ## Extend 
 You can extend the bot by implementing TA Calculation Steps and Scoring Steps and adding them to the bot. You will need to set the `score_threshold` value accordingly. 
