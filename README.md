@@ -1,13 +1,14 @@
 # Nolama Trading Bot
-Nolama is a simple, extendable trading bot. It is able to trade live with the Alpaca API. It can easily be extended and backtested. Currently implemented in a Jupyter notebook. 
+Nolama is a simple, extendable trading bot. It is able to trade live with the Alpaca API. It can easily be extended and backtested. 
 
 WARNING: This bot can not make consistent profit as is.
 
 ## Run
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fionnfuchs/nolama-trading-bot/blob/master/trading_bot.ipynb) 
+You can run the bot using this notebook in colab.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fionnfuchs/nolama-trading-bot/blob/master/jupyter/nolama_notebook.ipynb) 
 
-Just run the notebook. Insert your Alpaca API Key and Secret in the cell at the top. If you do not have an Alpaca account you will need to provide your own closing price lists for backtesting and live trading will not work as is. 
+Alternatively clone the repository, install the dependencies using pip and run `nolama/run.py`
 
 ## Performance 
 Currently tested on three timeframes of $AAPL (each roughly 3 days) with minute ticks. The bot trades profitable for these three timeframes even if the overall price trend is negative. The bot underperforms the stock for the timeframe where the price trend is very positive. 
