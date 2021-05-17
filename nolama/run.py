@@ -34,12 +34,12 @@ flat_aapl = api.get_bars("AAPL", TimeFrame.Minute, "2020-11-11", "2020-11-13", l
 # ---> Just set close to a list of closing prices and run this cell. Example lists are provided by the Alpaca API above.
 close = flat_aapl["close"].tolist()
 
-async def run_test():
+def run_test():
   for i in range (len(close)-1):
-    await bot.tick(close[i], i)
+    bot.tick(close[i], i)
 
   holding_comparison = close[len(close)-1] - close[0]
   print("Profit of the bot: " + str(bot.performance))
   print("Profit when just holding for comparison: " + str(holding_comparison))
 
-asyncio.run(run_test())
+run_test()

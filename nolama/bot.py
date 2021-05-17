@@ -103,7 +103,7 @@ class Bot:
         elif score <= -self.score_threshold:
             self.sell(close)
 
-    async def tick(self, close, index=0):
+    def tick(self, close, index=0):
         """
         Async tick function. Called with a closing price. Updates all values, calculates score and calls bot actions.
         """
