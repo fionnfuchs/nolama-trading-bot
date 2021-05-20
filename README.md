@@ -5,10 +5,45 @@ WARNING: This bot can not make consistent profit as is.
 
 ## Run
 
+### Colab (recommended)
+
 You can run the bot using this notebook in colab:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fionnfuchs/nolama-trading-bot/blob/master/jupyter/nolama_notebook.ipynb) 
 
-Alternatively clone the repository, install the dependencies using pip and run `nolama/run.py`.
+### With Docker
+
+1. Clone the repository
+
+2. Build and run
+
+```
+docker build -t nolama:bot .
+
+docker run -it nolama:bot
+``` 
+
+### Virtual Environment (without Docker)
+
+1. Clone the repository 
+2. Create and activate virtual environment 
+
+```
+python3 -m venv env
+
+source env/bin/activate
+``` 
+
+3. Install dependencies 
+
+```
+pip install -r "requirements.txt"
+``` 
+
+4. Run
+
+```
+python3 nolama/run.py
+``` 
 
 ## Performance 
 Currently tested on three timeframes of $AAPL (each roughly 3 days) with minute ticks. The bot trades profitable for these three timeframes even if the overall price trend is negative. The bot underperforms the stock for the timeframe where the price trend is very positive. 
