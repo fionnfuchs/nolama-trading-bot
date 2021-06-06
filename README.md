@@ -1,5 +1,5 @@
 # Nolama Trading Bot
-Nolama is a simple, extendable trading bot. It is able to trade live with the Alpaca API. It can easily be extended and backtested. 
+Nolama is a simple, extendable trading bot. It is able to trade live with the Alpaca API. It can easily be extended and backtested. I have also tested it with historical bitcoin data. An example for Bitcoin can be found as a Jupyter Notebook in the repo and on Colab below.
 
 WARNING: This bot can not make consistent profit as is.
 
@@ -9,6 +9,10 @@ WARNING: This bot can not make consistent profit as is.
 
 You can run the bot using this notebook in colab:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fionnfuchs/nolama-trading-bot/blob/master/jupyter/nolama_notebook.ipynb) 
+
+See how it works with Bitcoin:
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fionnfuchs/nolama-trading-bot/blob/master/jupyter/nolama_bitcoin_notebook.ipynb) 
+
 
 ### With Docker
 
