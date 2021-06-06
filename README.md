@@ -7,10 +7,10 @@ WARNING: This bot can not make consistent profit as is.
 
 ### Colab (recommended)
 
-You can run the bot using this notebook in colab:
+You can run the bot using this notebook in colab. This is an example using the **Alpaca API and $AAPL**:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fionnfuchs/nolama-trading-bot/blob/master/jupyter/nolama_notebook.ipynb) 
 
-See how it works with Bitcoin:
+See how it works with **Bitcoin**:
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fionnfuchs/nolama-trading-bot/blob/master/jupyter/nolama_bitcoin_notebook.ipynb) 
 
 
