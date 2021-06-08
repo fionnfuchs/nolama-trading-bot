@@ -13,14 +13,14 @@ from bot import Bot
 
 nest_asyncio.apply()
 
-bot = Bot("BTC", None)
-bot.calculation_steps.append(BollingerBandsCalculation(window=30, window_dev=2))
+bot = Bot("BTC", None, margin=0.01)
+bot.calculation_steps.append(BollingerBandsCalculation(window=40, window_dev=2))
 bot.scoring_steps.append(BollingerBandsScoring())
 
-data = HistoricalData('BTC-USD',60,'2021-05-17-00-00','2021-05-19-00-00').retrieve_data()
+data = HistoricalData('BTC-USD',300,'2021-04-01-00-00','2021-04-30-00-00').retrieve_data()
 
 close = data["close"].to_list()
-print(close)
+#print(close)
 
 def run_test():
   for i in range (len(close)-1):

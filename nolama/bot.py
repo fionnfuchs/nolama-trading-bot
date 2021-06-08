@@ -7,11 +7,12 @@ class Bot:
     Look at the usage example for a quickstart.
     """
 
-    def __init__(self, symbol, api, testing=True, crop_at=100, score_threshold=1):
+    def __init__(self, symbol, api, testing=True, crop_at=100, score_threshold=1, margin=0):
         self.symbol = symbol
         self.testing = testing
         self.crop_at = crop_at
         self.score_threshold = score_threshold
+        self.margin = margin
 
         self.df = pd.DataFrame({"close": []})
         self.ta_values = []
@@ -73,7 +74,7 @@ class Bot:
         if not self.holding:
             # print("--- Buying at " + str(close) + " ---")
             self.holding = True
-            self.bought_at = close
+            self.bought_at = close + (close * self.margin)
             self.trades.append({"type": "buy", "price": close, "index": self.index})
 
             if not self.testing:
